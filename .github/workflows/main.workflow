@@ -12,13 +12,13 @@ action "login" {
 action "push" {
   uses = "actions/heroku@master"
   needs = "login"
-  args = "container:push --recursive -a ["HEROKU_APP"]"
-  secrets = ["HEROKU_API_KEY"]
+  args = "container:push --recursive"
+  secrets = ["HEROKU_API_KEY", "HEROKU_APP"]
 }
 
 action "release" {
   uses = "actions/heroku@master"
   needs = "push"
-  args = "container:release -a ["HEROKU_APP"] web worker"
-  secrets = ["HEROKU_API_KEY"]
+  args = "container:release web worker"
+  secrets = ["HEROKU_API_KEY", "HEROKU_APP"]
 }
