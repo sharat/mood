@@ -38,23 +38,7 @@ end
 
 I decided not to store the information about breakfast, lunch and dinner, as it would make time zones more complex, as [I'm traveling quite a bit](https://whereisfelix.today).
 
-## Future
-
-### Graphs
-
-I want a nice visualization page & dashboard for this. Maybe even just send a weekly and monthly summary via Telegram?
-
-Right now, just send `/graph` to your bot to get your historic mood as a simple graph.
-
-### Alerts
-
-I want my bot to alert me when it detects a downwards trends. Similar to the stock trading approach, I was thinking of using the 7d average (7 days, 3 times a day => 21 data points). It's all relative, so if there is a downwards trends for 2 weeks, there probably is something bothering you
-
-### Integration into 1SE
-
-I usually edit the 1SE videos slightly to have "subtitles" for some of the important life events. Additionally, I throw in the classic [Every day of my life music](https://www.youtube.com/watch?v=m_xlkC2DsSI).
-
-Additionally, with that data, I want to overlay my happiness level somehow, probably in the form of a graph, a bar, or a wave. Not sure yet, but I got 11 months to figure that out.
+> Stripped out Felix's content here
 
 ## How to use it
 
@@ -65,6 +49,8 @@ You'll have to setup a few things
   - To get the `TELEGRAM_CHAT_ID`, send a message to your bot and then access the following URL in your browser `https://api.telegram.org/bot[TELEGRAM_TOKEN]/getUpdates`. You'll see a message, and within that, the Chat ID to use
 - And host it on any server, like Heroku, and use the Heroku scheduler feature to call `rake morning`, `rake noon` and `rake evening`
 - Make sure the Heroku worker is enabled
+
+> End of Felix Readme
 
 ## Deploy to Heroku
 
