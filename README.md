@@ -68,4 +68,4 @@ You'll have to setup a few things
 
 ## Deploy to Heroku
 
-Deploying the code on Heroku is the addition changes made in the forked repository. This uses GitHub Action to make a simple container-based build process using Heroku CLI. Heroku look for `HEROKU_API_KEY` and `HEROKU_APP` as environment variables. Configure this under `Settings/Secrets` page. Have a looka at `.github/workflows/push.yml`. Currently it deploys every push made in the repo. You can configure this per branch. [Read More*](https://help.github.com/en/categories/automating-your-workflow-with-github-actions).
+Deploying the code on Heroku is the addition changes made in the forked repository. This uses GitHub Action to make a simple container-based build process using Heroku CLI. Heroku look for `HEROKU_API_KEY` and `HEROKU_APP` as environment variables. Configure this under [`Settings/Secrets`](https://github.com/sharat/mood/settings/secrets) page. Have a looka at `.github/workflows/push.yml`. Currently it deploys every push made in the repo. You can configure this per branch. [Read More*](https://help.github.com/en/categories/automating-your-workflow-with-github-actions).
