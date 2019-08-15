@@ -65,3 +65,7 @@ You'll have to setup a few things
   - To get the `TELEGRAM_CHAT_ID`, send a message to your bot and then access the following URL in your browser `https://api.telegram.org/bot[TELEGRAM_TOKEN]/getUpdates`. You'll see a message, and within that, the Chat ID to use
 - And host it on any server, like Heroku, and use the Heroku scheduler feature to call `rake morning`, `rake noon` and `rake evening`
 - Make sure the Heroku worker is enabled
+
+## Deploy to Heroku
+
+Deploying the code on Heroku is the addition changes made in the forked repository. This uses GitHub Action to make a simple container-based build process using Heroku CLI. Heroku look for `HEROKU_API_KEY` and `HEROKU_APP` as environment variables. Configure this under `Settings/Secrets` page. Have a looka at `.github/workflows/push.yml`. Currently it deploys every push made in the repo. You can configure this per branch. [Read More*](https://help.github.com/en/categories/automating-your-workflow-with-github-actions).
