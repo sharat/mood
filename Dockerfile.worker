@@ -5,4 +5,4 @@ ADD . /app
 
 RUN bundle install
 
-ENTRYPOINT [ "bundle exec ruby worker.rb" ]
+CMD [ "bundle", "exec", "ruby", "worker.rb" ]
