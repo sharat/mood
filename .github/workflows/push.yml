@@ -1,0 +1,27 @@
+on: push
+name: Deploy to Heroku
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: login
+      uses: actions/heroku@master
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      with:
+        args: container:login
+    - name: push
+      uses: actions/heroku@master
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        HEROKU_APP: ${{ secrets.HEROKU_APP }}
+      with:
+        args: container:push --recursive
+    - name: release
+      uses: actions/heroku@master
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        HEROKU_APP: ${{ secrets.HEROKU_APP }}
+      with:
+        args: container:release web worker
