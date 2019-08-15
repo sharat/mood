@@ -1,0 +1,8 @@
+FROM ruby:2.4.0
+
+WORKDIR /app
+ADD . /app
+
+RUN bundle install
+
+ENTRYPOINT [ "bundle exec ruby worker.rb" ]
