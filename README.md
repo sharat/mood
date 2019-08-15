@@ -36,7 +36,7 @@ If you forget to track a day, that's no big deal at all. The database is simple,
 end
 ```
 
-I decided not to store the information about breakfast, lunch and dinner, as it would make time zones more complex, as [I'm traveling quite a bit](https://whereisfelix.today).
+I decided not to store the information about breakfast, lunch and dinner, as it would make time zones more complex.
 
 > Stripped out Felix's content here
 
